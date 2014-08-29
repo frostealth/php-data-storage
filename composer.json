@@ -1,0 +1,19 @@
+{
+    "name": "frostealth/php-data-storage",
+    "description": "PHP Data Storage",
+    "version" : "1.0.0",
+    "authors": [
+        {
+            "name": "Kudinov Ivan",
+            "email": "frostealth@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "frostealth\\Storage\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.4.0"
+    }
+}
