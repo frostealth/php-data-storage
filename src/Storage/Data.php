@@ -73,7 +73,7 @@ class Data
     public function replace(array $data, $recursive = false)
     {
         $function = $recursive ? 'array_replace_recursive' : 'array_replace';
-        $result = $function($this->data, $data);
+        $result = call_user_func($function, $this->all(), $data);
         $this->fill($result);
     }
 

@@ -1,28 +1,29 @@
 {
-    "name": "frostealth/php-data-storage",
-    "description": "PHP Data Storage",
-    "keywords": ["storage"],
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Kudinov Ivan",
-            "email": "frostealth@gmail.com"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "frostealth\\": "src/"
-        }
-    },
-    "require": {
-        "php": ">=5.4.0"
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "frostealth\\Storage\\Tests\\": "tests/"
-        }
-    },
-    "require-dev": {
-        "phpunit/phpunit": "4.2.*"
+  "name": "frostealth/php-data-storage",
+  "description": "PHP Data Storage",
+  "keywords": ["storage"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ivan Kudinov",
+      "email": "frostealth@gmail.com",
+      "homepage": "http://frostealth.ru"
     }
+  ],
+  "autoload": {
+    "psr-4": {
+      "frostealth\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "frostealth\\Tests\\Storage\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.2.*"
+  }
 }
