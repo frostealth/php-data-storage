@@ -39,11 +39,11 @@ class MyClass
     protected $data;
 
     /**
-     * @param DataInterface $storage
+     * @param DataInterface $data
      */
-    public function __construct(DataInterface $storage)
+    public function __construct(DataInterface $data)
     {
-        $this->storage = $data;
+        $this->data = $data;
     }
 }
 ```
