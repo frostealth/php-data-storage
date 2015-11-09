@@ -7,7 +7,7 @@
          stopOnFailure="true">
 
     <testsuites>
-        <testsuite name="Container Tests">
+        <testsuite name="Data Tests">
             <directory>./tests</directory>
         </testsuite>
     </testsuites>

@@ -1,28 +1,30 @@
 <?php
 
-namespace frostealth\Storage;
+namespace frostealth\storage;
 
 /**
  * Class Data
  *
- * @package frostealth\Storage
+ * @package frostealth\storage
  */
-class Data
+class Data implements DataInterface
 {
-    /** @var array */
+    /**
+     * @var array
+     */
     protected $data;
 
     /**
      * @param array $data
      */
-    public function  __construct(array $data = [])
+    public function __construct(array $data = [])
     {
         $this->fill($data);
     }
 
     /**
      * @param string $key
-     * @param mixed $value
+     * @param mixed  $value
      */
     public function set($key, $value)
     {
@@ -31,7 +33,7 @@ class Data
 
     /**
      * @param string $key
-     * @param mixed $default
+     * @param mixed  $default
      *
      * @return mixed
      */
@@ -68,7 +70,7 @@ class Data
 
     /**
      * @param array $data
-     * @param bool $recursive
+     * @param bool  $recursive
      */
     public function replace(array $data, $recursive = false)
     {
@@ -93,9 +95,28 @@ class Data
         return $this->data;
     }
 
+    /**
+     * Clear all values
+     */
     public function clear()
     {
         $this->fill([]);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function count()
+    {
+        return count($this->data);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getIterator()
+    {
+        return new \ArrayIterator($this->data);
     }
 }
  

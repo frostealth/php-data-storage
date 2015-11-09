@@ -1,13 +1,9 @@
 <?php
 
-namespace frostealth\Tests\Storage;
-
-use frostealth\Storage\Data;
+use frostealth\storage\Data;
 
 /**
  * Class DataTest
- *
- * @package frostealth\Tests\Storage
  */
 class DataTest extends \PHPUnit_Framework_TestCase
 {
