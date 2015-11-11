@@ -5,7 +5,7 @@ Simple PHP Data Storage.
 ## Usage
 
 ```php
-$storage = new frostealth\storage\Data(); // or $storage = new frostealth\storage\Data($array);
+$storage = new frostealth\storage\Data(); // or new frostealth\storage\Data($array);
 $storage->set('login', 'example@example.com');
 
 // ...
@@ -23,6 +23,19 @@ if ($storage->get('login', false)) {
 // ...
 
 $storage->clear();
+
+
+// working with arrays using "dot" notation
+$storage = new frostealth\storage\ArrayData();
+$storage->set('params', ['method' => 'post', 'url' => 'http://example.com/']);
+
+$url = $storage->get('params.url'); // 'http://example.com/'
+$storage->set('params.method', 'get');
+$method = $storage->get('params.method'); // 'get'
+$params = $storage->get('params'); // ['method' => 'get', 'url' => 'http://example.com/']
+
+$storage->set('options.my_option', 'value');
+$options = $storage->get('options'); // ['my_option' => 'value]
 
 ```
 
